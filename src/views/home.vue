@@ -2,12 +2,14 @@
   <headComp :btnList="btnList" />
   <comp1 />
   <comp2 class="pd" />
+  <comp3 />
 </template>
 
 <script setup>
 import headComp from '@/components/head-comp.vue'
 import comp1 from './components/comp1.vue'
 import comp2 from './components/comp2.vue'
+import comp3 from './components/comp3.vue'
 const btnList = [
   {
     label: '会员方案',
@@ -31,5 +33,8 @@ const btnList = [
 <style lang="less">
 .pd {
   padding: 110px 100px;
+}
+.mg {
+  margin: 110px 100px;
 }
 </style>

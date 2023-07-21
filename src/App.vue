@@ -9,7 +9,7 @@
 
 <style>
 .index-page-container {
-  width: 1400px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 </style>
