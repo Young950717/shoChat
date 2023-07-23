@@ -1,13 +1,17 @@
-import Home from '../views/home.vue'
-import App from '../App.vue'
+import Page1 from '../views/index/page1/index.vue'
+import Page2 from '../views/index/page2/index.vue'
 const routes =  [
   {
     path: '/',
-    redirect: '/index',
+    redirect: '/home',
     children: [
       {
-        path: 'index',
-        component: Home,
+        path: 'home',
+        component: Page1,
+      },
+      {
+        path: 'member',
+        component: Page2,
       }
     ]
   }

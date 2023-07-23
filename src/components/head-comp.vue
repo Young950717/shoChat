@@ -73,7 +73,7 @@ onUnmounted(() => {
       font-size: 16px;
       line-height: 22px;
       padding: 8px 22px;
-      &:first-child {
+      &.el-button--default :first-child  {
         color: #0529c5;
       }
     }

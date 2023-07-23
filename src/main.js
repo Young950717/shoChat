@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import routes from '@/router/index'
-import '@/assets/style/reset.less'
+import '@/assets/style/index.less'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
