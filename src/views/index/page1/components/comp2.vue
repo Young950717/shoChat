@@ -1,9 +1,9 @@
 <template>
   <div class="comp2">
     <div class="left">
-      <img class="left-img1" src="../../assets/images/comp2-2.png" />
-      <img class="left-img2" src="../../assets/images/comp2-3.png" />
-      <img class="left-img3" src="../../assets/images/comp2-4.png" />
+      <img class="left-img1" src="@/assets/images/comp2-2.png" />
+      <img class="left-img2" src="@/assets/images/comp2-3.png" />
+      <img class="left-img3" src="@/assets/images/comp2-4.png" />
     </div>
     <div class="right">
       <p class="row">
