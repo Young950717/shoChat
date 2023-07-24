@@ -16,13 +16,17 @@ import comp2 from './components/comp2.vue'
 import comp3 from './components/comp3.vue'
 import comp4 from './components/comp4.vue'
 import comp5 from './components/comp5.vue'
+import { useRouter } from 'vue-router'
+const router = useRouter()
 const btnList = [
   {
     label: '会员方案',
     type: 'default',
 
     onClick: () => {
-      console.log('点击会员方案')
+      router.push({
+        path: '/member'
+      })
     }
   },
   {
@@ -30,7 +34,7 @@ const btnList = [
     type: 'primary',
     color: '#008DFF',
     onClick: () => {
-      console.log('点击免费试用')
+      window.open(import.meta.env.VITE_OUT_LINK)
     }
   }
 ]

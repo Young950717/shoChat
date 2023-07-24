@@ -8,6 +8,10 @@ const router = createRouter({
   history: createWebHistory(),
   routes
 })
+router.beforeEach((to, from, next) => {
+  window.scrollTo(0,0);
+  next()
+})
 const app = createApp(App)
 app.use(router)
 app.mount('#app')

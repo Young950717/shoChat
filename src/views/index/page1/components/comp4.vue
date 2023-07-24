@@ -5,7 +5,7 @@
       <p class="small-desc">
         Chrome扩展一键安装，专为Shopee客服页面定制，学习0成本。会员订阅费+大语言模型用量成本费的完美结合，让您只为所需付费，畅快体验我们服务的强大功能！
       </p>
-      <el-button type="primary" color="#008DFF">会员方案</el-button>
+      <el-button @click="openUrl" type="primary" color="#008DFF">会员方案</el-button>
     </div>
 
     <div class="right">
@@ -16,6 +16,13 @@
 
 <script setup>
 import { ElButton } from 'element-plus'
+import { useRouter } from 'vue-router'
+const router = useRouter()
+const openUrl = () => {
+  router.push({
+    path: '/member'
+  })
+}
 </script>
 
 <style lang="less" scoped>

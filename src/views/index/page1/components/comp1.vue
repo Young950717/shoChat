@@ -9,7 +9,7 @@
         利用ShoChat的先进技术，您的店铺将拥有自动化的消息处理和智能化的客户互动。根据客户的需求提供个性化建议和推荐，提高销售转化率和客户满意度。Sochat
         让您的回复更智能、更准确，为客户带来卓越的服务体验！
       </p>
-      <el-button type="primary" color="#008DFF">立即使用</el-button>
+      <el-button @click="openUrl" type="primary" color="#008DFF">立即使用</el-button>
     </div>
 
     <div class="right">
@@ -21,6 +21,9 @@
 
 <script setup>
 import { ElButton } from 'element-plus'
+const openUrl = () => {
+  window.open(import.meta.env.VITE_OUT_LINK)
+}
 </script>
 
 <style lang="less" scoped>
@@ -67,6 +70,7 @@ import { ElButton } from 'element-plus'
     height: 100%;
     top: 0;
     right: 0;
+    z-index: -1;
     .bg1 {
       position: absolute;
       right: 0;

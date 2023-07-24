@@ -4,6 +4,7 @@
 <template>
   <div class="index-page-container">
     <router-view />
+    <el-backtop :right="50" :bottom="50" />
   </div>
 </template>
 

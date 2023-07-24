@@ -8,7 +8,7 @@
       <p class="small-desc">
         ShoChat提供一种灵活且高性价比的付费模式，结合会员订阅费和大语言模型按量计成本费。让您在使用大语言模型时能够灵活调整和控制成本。我们致力于为您提供最优质的服务，同时确保您在付费方面拥有更多的选择和掌控权。
       </p>
-      <el-button type="primary" color="#008DFF">了解更多</el-button>
+      <el-button @click="openUrl" type="primary" color="#008DFF">了解更多</el-button>
     </div>
 
     <div class="right">
@@ -20,6 +20,9 @@
 
 <script setup>
 import { ElButton } from 'element-plus'
+const openUrl = () => {
+  window.open(import.meta.env.VITE_OUT_LINK)
+}
 </script>
 
 <style lang="less" scoped>

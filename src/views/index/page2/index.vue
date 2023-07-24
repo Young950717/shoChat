@@ -12,13 +12,17 @@ import footComp from '@/components/foot-comp.vue'
 import comp1 from './components/comp1.vue'
 import comp2 from './components/comp2.vue'
 import comp3 from './components/comp3.vue'
+import { useRouter } from 'vue-router'
+const router = useRouter()
 const btnList = [
   {
     label: '产品介绍',
     type: 'primary',
     color: '#008DFF',
     onClick: () => {
-      console.log('点击产品介绍')
+      router.push({
+        path: '/home'
+      })
     }
   }
 ]

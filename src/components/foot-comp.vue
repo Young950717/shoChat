@@ -6,7 +6,7 @@
       <p class="text">Sochat 让您的回复更智能、更准确，为客户带来卓越的服务体验！</p>
     </div>
     <div class="right">
-      <p class="text">联系我们：fuersao@163.com</p>
+      <!-- <p class="text">联系我们：fuersao@163.com</p> -->
       <img class="qrCode" src="../assets/images/qrCode.png" alt="" />
       <p class="text">ShoChat@版权所有</p>
     </div>
