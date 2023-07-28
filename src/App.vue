@@ -1,4 +1,10 @@
 <script setup>
+import { useRoute } from 'vue-router'
+const route = useRoute()
+const shop_url = route.query.shop_url || ''
+const shop_uid = route.query.shop_uid || ''
+sessionStorage.setItem('_shop_url_', JSON.stringify(shop_url))
+sessionStorage.setItem('_shop_uid_', JSON.stringify(shop_uid))
 </script>
 
 <template>

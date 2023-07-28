@@ -73,6 +73,7 @@ const openUrl = () => {
     height: 100%;
     top: 0;
     left: 0;
+    z-index: -1;
     .bg1 {
       position: absolute;
       left: 0;
@@ -82,9 +83,9 @@ const openUrl = () => {
     }
     .bg2 {
       position: absolute;
-      left: 95px;
+      left: 149px;
       top: 130px;
-      width: 654px;
+      width: 600px;
       height: 621px;
       // height: 557px;
     }

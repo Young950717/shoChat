@@ -9,9 +9,10 @@
         </li>
       </ul>
       <div class="row">
-        <el-button type="primary" class="btn">限时5折</el-button>
+        <el-button :loading="btnLoading" type="primary" @click="joinUrl" class="btn">立即加入</el-button>
         <div class="df">
-          <span class="text big">{{ amout }}元</span>
+          <span class="text big mr-12">早鸟价</span>
+          <span class="text big">{{ amout }}</span>
           <span class="text small">/月</span>
         </div>
       </div>
@@ -27,6 +28,9 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import { checkoutSession } from '@/api'
+import { ElMessage } from 'element-plus'
 const list = [
   '全部回复功能',
   '历史数据学习',
@@ -35,7 +39,23 @@ const list = [
   '店铺商品和优惠券知识库<br/>自动更新',
   'AI对话模型训练'
 ]
-const amout = 49
+const amout = '$9.9'
+const btnLoading = ref(false)
+const joinUrl = async () => {
+  try {
+    btnLoading.value = true
+    const resp = await checkoutSession({
+      product_id: 7
+    })
+    btnLoading.value = false
+    if (resp) {
+      window.location.href = resp
+    }
+  } catch (e) {
+    btnLoading.value = false
+    ElMessage.error(e.message ? e.message : '出错了')
+  }
+}
 </script>
 
 <style lang="less" scoped>
@@ -88,9 +108,10 @@ const amout = 49
       justify-content: flex-end;
       margin-bottom: 70px;
       .btn {
-        width: 86px;
+        width: 100px;
         height: 36px;
         margin-right: 22px;
+        padding: 0 12px;
       }
       .df {
         display: flex;
@@ -106,6 +127,9 @@ const amout = 49
         }
         &.small {
           font-size: 20px;
+        }
+        &.mr-12 {
+          margin-right: 12px;
         }
       }
     }

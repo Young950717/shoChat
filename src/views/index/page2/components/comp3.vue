@@ -4,24 +4,27 @@
     <p class="desc">（按大数据模型 API成本价收取）</p>
     <ul class="list">
       <li class="item">
-        <span class="top">30元充值包</span>
+        <span class="top">3美元充值包</span>
         <span class="detail">
-          <p>预计可生成1000-2000条回复</p>
-          <p>或翻译1000+回复</p>
+          <p>预计可生成300-370条回复</p>
+          <p>或翻译1500回复</p>
+          <el-button type="primary" :loading="btnLoading" @click="plus(5)">加量充值</el-button>
         </span>
       </li>
       <li class="item">
-        <span class="top">60元充值包</span>
+        <span class="top">5美元充值包</span>
         <span class="detail">
-          <p>预计可生成2000-4000条回复</p>
-          <p>或翻译2000+回复</p>
+          <p>预计可生成500-650条回复</p>
+          <p>或翻译2500回复</p>
+          <el-button type="primary" :loading="btnLoading" @click="plus(4)">加量充值</el-button>
         </span>
       </li>
       <li class="item">
-        <span class="top">120元充值包</span>
+        <span class="top">10美充值包</span>
         <span class="detail">
-          <p>预计可生成4000-8000条回复</p>
-          <p>或翻译4000+回复</p>
+          <p>预计可生成1000-1250条回复</p>
+          <p>或翻译5000回复</p>
+          <el-button type="primary" :loading="btnLoading" @click="plus(3)">加量充值</el-button>
         </span>
       </li>
     </ul>
@@ -35,6 +38,27 @@
     </p>
   </div>
 </template>
+<script setup>
+import { ref } from 'vue'
+import { checkoutSession } from '@/api'
+import { ElMessage } from 'element-plus'
+const btnLoading = ref(false)
+const plus = async id => {
+  try {
+    btnLoading.value = true
+    const resp = await checkoutSession({
+      product_id: id
+    })
+    btnLoading.value = false
+    if (resp) {
+      window.location.href = resp
+    }
+  } catch (e) {
+    btnLoading.value = false
+    ElMessage.error(e.message ? e.message : '出错了')
+  }
+}
+</script>
 <style lang="less" scoped>
 .comp3 {
   padding: 50px 137px 110px 137px;
@@ -87,19 +111,30 @@
       }
       .detail {
         width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         // height: 232px;
         background: #fff;
         border-radius: 0 0 8px 8px;
-        padding: 31px 0 37px 54px;
+        padding: 31px 54px 37px 54px;
         box-sizing: border-box;
         p {
           color: black;
           font-size: 18px;
-          font-family: OPlusSans 3;
+          font-family: OPlusSans;
           font-weight: 500;
           line-height: 52px;
           word-wrap: break-word;
+          &:last-of-type {
+            margin-bottom: 24px;
+          }
         }
+        // .df-c {
+        //   display: flex;
+        //   justify-content: center;
+        // }
       }
     }
   }
