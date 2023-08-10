@@ -1,4 +1,5 @@
 <script setup>
+import footComp from '@/components/foot-comp.vue'
 import { useRoute } from 'vue-router'
 const route = useRoute()
 const shop_url = route.query.shop_url || ''
@@ -12,6 +13,7 @@ sessionStorage.setItem('_shop_uid_', JSON.stringify(shop_uid))
     <router-view />
     <el-backtop :right="50" :bottom="50" />
   </div>
+  <foot-comp />
 </template>
 
 <style>

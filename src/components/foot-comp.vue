@@ -21,7 +21,7 @@ export default {}
 .foot-comp {
   display: flex;
   justify-content: space-between;
-  width: 1400px;
+  // width: 1400px;
   height: 240px;
   box-sizing: border-box;
   background: #008dff;

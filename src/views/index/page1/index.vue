@@ -5,12 +5,10 @@
   <comp3 class="mg mt0" />
   <comp4 class="pd mt0" />
   <comp5 class="pd mt0" />
-  <foot-comp />
 </template>
 
 <script setup>
 import headComp from '@/components/head-comp.vue'
-import footComp from '@/components/foot-comp.vue'
 import comp1 from './components/comp1.vue'
 import comp2 from './components/comp2.vue'
 import comp3 from './components/comp3.vue'

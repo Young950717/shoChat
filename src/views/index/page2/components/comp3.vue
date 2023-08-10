@@ -1,7 +1,7 @@
 <template>
   <div class="comp3">
-    <p class="title">ChatGPT调用加量包</p>
-    <p class="desc">（按大数据模型 API成本价收取）</p>
+    <p class="title">大语言模型调用加量包</p>
+    <p class="desc">（按大语言模型 API成本价收取）</p>
     <ul class="list">
       <li class="item">
         <span class="top">3美元充值包</span>
@@ -29,8 +29,8 @@
       </li>
     </ul>
     <p class="tips">
-      *ChatGPT调用加量包购买须知： <br />
-      · 该充值包仅用于结算 ChatGPT官方接口调用成本，本产品不会从中谋取任何经济收益。<br />
+      *大语言模型调用加量包购买须知： <br />
+      · 该充值包仅用于结算 大语言模型官方接口调用成本，本产品不会从中谋取任何经济收益。<br />
       · 具体官方定价请参考官方文档。<br />
       · 具体消耗情况在产品右上角实时显示。<br />
       · 如资费耗尽，则会造成插件无法使用，请及时充值。<br />

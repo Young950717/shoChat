@@ -2,7 +2,7 @@
   <div class="comp1">
     <div class="left">
       <p class="desc">
-        基于大数据模型创新型Shopee智能客服Chrome插件
+        基于大语言模型创新型Shopee智能客服Chrome插件
         <img class="desc-img" src="@/assets/images/Group-14.png" />
       </p>
       <p class="small-desc">
