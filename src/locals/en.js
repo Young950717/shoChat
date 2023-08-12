@@ -3,7 +3,7 @@ export default {
     btn1: 'Membership Plans',
     btn2: 'Free Trial',
     btn3: 'Product Introduction',
-    langText:'Language Change'
+    langText: 'Language Change'
   },
   footer: {
     text1: 'Build intelligent stores, enhance customer experience',
@@ -30,11 +30,11 @@ export default {
       },
       li2: {
         title: 'Barrier-free multilingual conversations',
-        desc: '提供了多语言无障碍的对话理解和回复翻译功能。它支持东南亚6国的多语言交流，商家不再受限于语言障碍，更好地满足不同语言背景客户的需求，扩大业务范围。'
+        desc: 'It provides multilingual barrier-free conversation comprehension and response translation features. It supports multilingual communication in six Southeast Asian countries, freeing merchants from language barriers and better meeting the needs of customers with diverse language backgrounds, thus expanding business reach.'
       },
       li3: {
         title: 'Building an intelligent store knowledge base',
-        desc: '一键学习店铺商品和优惠券信息，构建不断学习和更新的店铺专属的知识库。构建店铺对话模型，从中获取准确的信息，提供更准确和个性化的回复，提升客户满意度和品牌形象。'
+        desc: 'One-click learning of store product and coupon information, building a continuously learning and updating store-specific knowledge base. Constructing store conversation models to extract accurate information, providing more precise and personalized responses, thereby enhancing customer satisfaction and brand image.'
       }
     },
     comp4: {
