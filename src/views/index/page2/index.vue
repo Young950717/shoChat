@@ -11,10 +11,12 @@ import comp1 from './components/comp1.vue'
 import comp2 from './components/comp2.vue'
 import comp3 from './components/comp3.vue'
 import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 const router = useRouter()
 const btnList = [
   {
-    label: '产品介绍',
+    label: t('header.btn3'),
     type: 'primary',
     color: '#008DFF',
     onClick: () => {

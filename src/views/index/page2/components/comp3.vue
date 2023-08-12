@@ -1,40 +1,40 @@
 <template>
   <div class="comp3">
-    <p class="title">大语言模型调用加量包</p>
-    <p class="desc">（按大语言模型 API成本价收取）</p>
+    <p class="title">{{ $t('memberText.comp3.title') }}</p>
+    <p class="desc">{{ $t('memberText.comp3.desc') }}</p>
     <ul class="list">
       <li class="item">
-        <span class="top">3美元充值包</span>
+        <span class="top">{{ $t('memberText.comp3.list[0].title') }}</span>
         <span class="detail">
-          <p>预计可生成300-370条回复</p>
-          <p>或翻译1500回复</p>
-          <el-button type="primary" :loading="btnLoading" @click="plus(5)">加量充值</el-button>
+          <p>{{ $t('memberText.comp3.list[0].text1') }}</p>
+          <p>{{ $t('memberText.comp3.list[0].text2') }}</p>
+          <el-button type="primary" :loading="btnLoading" @click="plus(5)">{{ $t('memberText.comp3.btn') }}</el-button>
         </span>
       </li>
       <li class="item">
-        <span class="top">5美元充值包</span>
+        <span class="top">{{ $t('memberText.comp3.list[1].title') }}</span>
         <span class="detail">
-          <p>预计可生成500-650条回复</p>
-          <p>或翻译2500回复</p>
-          <el-button type="primary" :loading="btnLoading" @click="plus(4)">加量充值</el-button>
+          <p>{{ $t('memberText.comp3.list[1].text1') }}</p>
+          <p>{{ $t('memberText.comp3.list[1].text2') }}</p>
+          <el-button type="primary" :loading="btnLoading" @click="plus(4)">{{ $t('memberText.comp3.btn') }}</el-button>
         </span>
       </li>
       <li class="item">
-        <span class="top">10美充值包</span>
+        <span class="top">{{ $t('memberText.comp3.list[1].title') }}</span>
         <span class="detail">
-          <p>预计可生成1000-1250条回复</p>
-          <p>或翻译5000回复</p>
-          <el-button type="primary" :loading="btnLoading" @click="plus(3)">加量充值</el-button>
+          <p>{{ $t('memberText.comp3.list[2].text1') }}</p>
+          <p>{{ $t('memberText.comp3.list[2].text2') }}</p>
+          <el-button type="primary" :loading="btnLoading" @click="plus(3)">{{ $t('memberText.comp3.btn') }}</el-button>
         </span>
       </li>
     </ul>
     <p class="tips">
-      *大语言模型调用加量包购买须知： <br />
-      · 该充值包仅用于结算 大语言模型官方接口调用成本，本产品不会从中谋取任何经济收益。<br />
-      · 具体官方定价请参考官方文档。<br />
-      · 具体消耗情况在产品右上角实时显示。<br />
-      · 如资费耗尽，则会造成插件无法使用，请及时充值。<br />
-      · 充值包购买后充值余额永久有效。
+      {{ $t('memberText.comp3.longTips[0]') }} <br />
+      {{ $t('memberText.comp3.longTips[1]') }} <br />
+      {{ $t('memberText.comp3.longTips[2]') }} <br />
+      {{ $t('memberText.comp3.longTips[3]') }} <br />
+      {{ $t('memberText.comp3.longTips[4]') }} <br />
+      {{ $t('memberText.comp3.longTips[5]') }} 
     </p>
   </div>
 </template>

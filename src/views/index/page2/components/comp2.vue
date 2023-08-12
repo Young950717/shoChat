@@ -1,7 +1,7 @@
 <template>
   <div class="comp2">
     <div class="left">
-      <p class="title">ShoChat会员</p>
+      <p class="title">{{ $t('memberText.comp2.title') }}</p>
       <ul class="list">
         <li v-for="item of list" :key="item" class="item">
           <img class="icon" src="@/assets/images/Vector.png" />
@@ -9,15 +9,17 @@
         </li>
       </ul>
       <div class="row">
-        <el-button :loading="btnLoading" type="primary" @click="joinUrl" class="btn">立即加入</el-button>
+        <el-button :loading="btnLoading" type="primary" @click="joinUrl" class="btn">{{
+          $t('memberText.comp2.btn')
+        }}</el-button>
         <div class="df">
-          <span class="text big mr-12">早鸟价</span>
+          <span class="text big mr-12">{{ $t('memberText.comp2.price') }}</span>
           <span class="text big">{{ amout }}</span>
-          <span class="text small">/月</span>
+          <span class="text small">/{{ $t('memberText.comp2.unit') }}</span>
         </div>
       </div>
       <span class="desc">
-        *每个ShoChat账号会自动绑定唯一对应的Shopee店铺，账号不限使用人数，均可安装，并在该店铺客服聊天页面使用。
+        {{ $t('memberText.comp2.desc') }}
       </span>
     </div>
     <div class="right">
@@ -31,13 +33,16 @@
 import { ref } from 'vue'
 import { checkoutSession } from '@/api'
 import { ElMessage } from 'element-plus'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 const list = [
-  '全部回复功能',
-  '历史数据学习',
-  '所有多语言',
-  '支持新功能首发体验',
-  '店铺商品和优惠券知识库<br/>自动更新',
-  'AI对话模型训练'
+  t('memberText.comp2.list[0]'),
+  t('memberText.comp2.list[1]'),
+  t('memberText.comp2.list[2]'),
+  t('memberText.comp2.list[3]'),
+  t('memberText.comp2.list[4]'),
+  t('memberText.comp2.list[5]')
 ]
 const amout = '$9.9'
 const btnLoading = ref(false)

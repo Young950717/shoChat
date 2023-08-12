@@ -3,30 +3,24 @@
     <ul class="list">
       <li class="item">
         <img class="icon" src="@/assets/images/comp3-1.png" alt="" />
-        <span class="text">智能回复轻松搞定</span>
-        <span class="desc"
-          >智能回复实现了生成回复、补全回复、翻译回复等一键操作。商家只需轻轻点击，即可一键生成全部未读消息的回复，极大地减少了打字输入的工作量，提高了客服工作的效率和速度。</span
-        >
+        <span class="text">{{ $t('indexText.comp3.li1.title') }}</span>
+        <span class="desc">{{ $t('indexText.comp3.li1.desc') }}</span>
       </li>
       <li class="df alc">
         <img class="line" src="@/assets/images/line.png" />
       </li>
       <li class="item">
         <img class="icon" src="@/assets/images/comp3-2.png" alt="" />
-        <span class="text">无障碍多语言对话</span>
-        <span class="desc"
-          >提供了多语言无障碍的对话理解和回复翻译功能。它支持东南亚6国的多语言交流，商家不再受限于语言障碍，更好地满足不同语言背景客户的需求，扩大业务范围。</span
-        >
+        <span class="text">{{ $t('indexText.comp3.li2.title') }}</span>
+        <span class="desc">{{ $t('indexText.comp3.li2.desc') }}</span>
       </li>
-       <li class="df alc">
+      <li class="df alc">
         <img class="line" src="@/assets/images/line.png" />
       </li>
       <li class="item">
         <img class="icon" src="@/assets/images/comp3-3.png" alt="" />
-        <span class="text">构建智能店铺知识库</span>
-        <span class="desc"
-          >一键学习店铺商品和优惠券信息，构建不断学习和更新的店铺专属的知识库。构建店铺对话模型，从中获取准确的信息，提供更准确和个性化的回复，提升客户满意度和品牌形象。</span
-        >
+        <span class="text">{{ $t('indexText.comp3.li3.title') }}</span>
+        <span class="desc">{{ $t('indexText.comp3.li2.desc') }}</span>
       </li>
     </ul>
   </div>

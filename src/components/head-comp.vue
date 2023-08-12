@@ -13,20 +13,43 @@
         @click="btn.onClick"
         >{{ btn.label }}</el-button
       >
+      <el-dropdown @command="command">
+        <span class="el-dropdown-link">
+          {{ $t('header.langText') }}
+          <el-icon class="el-icon--right">
+            <arrow-down />
+          </el-icon>
+        </span>
+        <template #dropdown>
+          <el-dropdown-menu>
+            <el-dropdown-item command="zh">中文</el-dropdown-item>
+            <el-dropdown-item command="en">English</el-dropdown-item>
+          </el-dropdown-menu>
+        </template>
+      </el-dropdown>
     </div>
   </header>
   <!-- <div class="placeholder-box"></div> -->
 </template>
 
 <script setup>
-import { defineProps, ref, onMounted, onUnmounted } from 'vue'
+import { ArrowDown } from '@element-plus/icons-vue'
+import { defineProps, ref, onMounted, onUnmounted, nextTick } from 'vue'
 import { ElButton } from 'element-plus'
+import { useI18n } from 'vue-i18n'
+const { locale } = useI18n()
 const props = defineProps({
   btnList: {
     type: Array,
     default: () => []
   }
 })
+const command = lang => {
+  nextTick(() => {
+    locale.value = lang
+    localStorage.setItem('lang', lang)
+  })
+}
 const styleObj = ref('')
 const handleScroll = () => {
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
@@ -69,12 +92,17 @@ onUnmounted(() => {
     width: 155px;
   }
   .btn {
+    display: flex;
+    align-items: center;
     .btn-item {
       font-size: 16px;
       line-height: 22px;
       padding: 8px 22px;
-      &.el-button--default :first-child  {
+      &.el-button--default :first-child {
         color: #0529c5;
+      }
+      &:last-of-type {
+        margin-right: 12px;
       }
     }
   }
@@ -82,5 +110,11 @@ onUnmounted(() => {
 .placeholder-box {
   height: 60px;
   display: none;
+}
+.el-dropdown-link {
+  cursor: pointer;
+  color: #0529c5;
+  display: flex;
+  align-items: center;
 }
 </style>

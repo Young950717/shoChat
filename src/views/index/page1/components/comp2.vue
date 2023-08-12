@@ -9,22 +9,22 @@
       <p class="row">
         <img class="icon" src="@/assets/images/comp2-1.png" alt="" />
       </p>
-      <p class="text">商家面临的挑战及经验困扰</p>
+      <p class="text">{{ $t('indexText.comp2.title') }}</p>
       <p class="desc">
-        无论是大型企业还是小型店铺，经营业务都会面临一些困扰。我们提供专业的解决方案，帮助商家克服以下常见问题：
+        {{ $t('indexText.comp2.desc') }}
       </p>
       <ul class="list">
         <li class="item">
           <img class="icon" src="@/assets/images/comp2-icon1.png" />
-          <span class="item-text">多语种多店铺管理, 无法准确传达产品信息和服务给全球客户</span>
+          <span class="item-text">{{ $t('indexText.comp2.tips1') }}</span>
         </li>
         <li class="item">
           <img class="icon" src="@/assets/images/comp2-icon2.png" />
-          <span class="item-text">客服信息一致性困扰, 没有统一工作流程、培训和标准</span>
+          <span class="item-text">{{ $t('indexText.comp2.tips2') }}</span>
         </li>
         <li class="item">
           <img class="icon" src="@/assets/images/comp2-icon3.png" />
-          <span class="item-text">缺乏店铺信息知识库导致重复劳动、信息丢失和团队协作不畅</span>
+          <span class="item-text">{{ $t('indexText.comp2.tips3') }}</span>
         </li>
       </ul>
     </div>

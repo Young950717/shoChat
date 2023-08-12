@@ -1,11 +1,11 @@
 <template>
   <div class="comp4">
     <div class="left">
-      <p class="desc">释放产品全面潜力，畅享成本付费模式！</p>
+      <p class="desc">{{ $t('indexText.comp4.title') }}</p>
       <p class="small-desc">
-        Chrome扩展一键安装，专为Shopee客服页面定制，学习0成本。会员订阅费+大语言模型用量成本费的完美结合，让您只为所需付费，畅快体验我们服务的强大功能！
+        {{ $t('indexText.comp4.desc') }}
       </p>
-      <el-button @click="openUrl" type="primary" color="#008DFF">会员方案</el-button>
+      <el-button @click="openUrl" type="primary" color="#008DFF">{{ $t('header.btn1') }}</el-button>
     </div>
 
     <div class="right">

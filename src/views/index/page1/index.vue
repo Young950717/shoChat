@@ -15,27 +15,32 @@ import comp3 from './components/comp3.vue'
 import comp4 from './components/comp4.vue'
 import comp5 from './components/comp5.vue'
 import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
+const { t } = useI18n()
 const router = useRouter()
-const btnList = [
-  {
-    label: '会员方案',
-    type: 'default',
+const btnList = computed(() => {
+  return [
+    {
+      label: t('header.btn1'),
+      type: 'default',
 
-    onClick: () => {
-      router.push({
-        path: '/member'
-      })
+      onClick: () => {
+        router.push({
+          path: '/member'
+        })
+      }
+    },
+    {
+      label: t('header.btn2'),
+      type: 'primary',
+      color: '#008DFF',
+      onClick: () => {
+        window.open(import.meta.env.VITE_OUT_LINK)
+      }
     }
-  },
-  {
-    label: '免费试用',
-    type: 'primary',
-    color: '#008DFF',
-    onClick: () => {
-      window.open(import.meta.env.VITE_OUT_LINK)
-    }
-  }
-]
+  ]
+})
 </script>
 
 <style lang="less">

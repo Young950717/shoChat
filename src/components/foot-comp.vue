@@ -2,13 +2,13 @@
   <div class="foot-comp">
     <div class="left">
       <img class="logo" src="@/assets/images/logo2.png" alt="" />
-      <p class="text">打造智能店铺，提升客户体验</p>
-      <p class="text">Sochat 让您的回复更智能、更准确，为客户带来卓越的服务体验！</p>
+      <p class="text">{{ $t('footer.text1') }}</p>
+      <p class="text">{{ $t('footer.text2') }}</p>
     </div>
     <div class="right">
       <!-- <p class="text">联系我们：fuersao@163.com</p> -->
       <img class="qrCode" src="../assets/images/qrCode.png" alt="" />
-      <p class="text">ShoChat@版权所有</p>
+      <p class="text">{{ $t('footer.copyright') }}</p>
     </div>
   </div>
 </template>
@@ -50,7 +50,7 @@ export default {}
       margin-bottom: 11px;
     }
   }
-  .right{
+  .right {
     align-items: flex-end;
   }
 }
